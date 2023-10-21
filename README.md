@@ -45,7 +45,7 @@ SAP ui5 components for nui.
     ```
 
 ## Components are missing?
-If you find a component that is not missing, please open an issue.
+If you find a component that is missing, please open an issue.
 In the meantime you can import it like so:
 
 missing_component.hpp:
