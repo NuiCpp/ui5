@@ -9,4 +9,5 @@ target_include_directories(ui5 INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include")
 
 if (${NUI_UI5_BUILD_EXAMPLE})
     add_subdirectory(ui5-example-app)
+    target_link_libraries(ui5-example-app PRIVATE ui5)
 endif()
