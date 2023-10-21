@@ -17,7 +17,12 @@ export const allUi5Components = [
         name: 'Badge'
     },
     {
-        name: 'Breadcrumbs'
+        name: 'Breadcrumbs',
+        components: ['breadcrumbs', 'breadcrumbs-item'],
+        imports: [
+            "@ui5/webcomponents/dist/Breadcrumbs.js",
+            "@ui5/webcomponents/dist/BreadcrumbsItem.js"
+        ]
     },
     {
         name: 'BusyIndicator'
