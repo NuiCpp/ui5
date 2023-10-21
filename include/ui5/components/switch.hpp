@@ -14,5 +14,5 @@ import "@ui5/webcomponents/dist/Switch.js";
 
 namespace ui5
 {
-    NUI_MAKE_HTML_ELEMENT_RENAME(switch, "ui5-switch")
+    NUI_MAKE_HTML_ELEMENT_RENAME(switch_, "ui5-switch")
 }
