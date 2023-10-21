@@ -19,6 +19,9 @@ const generateHeader = (item, importBase) => {
     const componentLines = componentZip.map((c) => `NUI_MAKE_HTML_ELEMENT_RENAME(${c[1]}, \"ui5-${c[0]}\")`).join('\n    ');
 
     const content = `#pragma once
+
+#include <nui/frontend/dom/element.hpp>
+
 // clang-format off
 
 #ifdef NUI_INLINE
@@ -40,7 +43,6 @@ namespace ui5
 
 const generateHeaders = (components, basePath, importBase, kitchenSinkInclude) => {
     const headers = components.map((c) => generateHeader(c, importBase));
-    console.log(headers);
     // for each write to file sync :
     for (const header of headers) {
         //console.log(header);
@@ -85,13 +87,13 @@ const generateFiles = () => {
     fs.readdirSync(fioriDir).forEach((file) => {
         // if file:
         if (fs.lstatSync(`${absolutePath}/fiori/${file}`).isFile()) {
-            console.log(`Deleting ${file}`);
+            console.log(`Deleting fiori/${file}`);
             fs.unlinkSync(`${absolutePath}/fiori/${file}`);
         }
     });
 
-    generateHeaders(allUi5Components, absolutePath, 'webcomponents', path.join(absolutePath, '..', 'ui5_components.hpp'));
-    generateHeaders(allFioriItems, fioriDir, 'webcomponents-fiori', path.join(absolutePath, '..', 'ui5_fiori_components.hpp'));
+    generateHeaders(allUi5Components, absolutePath, 'webcomponents', path.join(absolutePath, '..', 'components.hpp'));
+    generateHeaders(allFioriItems, fioriDir, 'webcomponents-fiori', path.join(absolutePath, '..', 'fiori_components.hpp'));
 }
 
 generateFiles();

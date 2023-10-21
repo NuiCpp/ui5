@@ -1,4 +1,7 @@
 #pragma once
+
+#include <nui/frontend/dom/element.hpp>
+
 // clang-format off
 
 #ifdef NUI_INLINE
