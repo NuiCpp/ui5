@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(nui-ui5-components VERSION 0.0.1 LANGUAGES CXX)
+project(ui5 VERSION 0.0.1 LANGUAGES CXX)
 
-add_library(nui-ui5-components INTERFACE)
-target_include_directories(nui-ui5-components INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include")
+option(NUI_UI5_BUILD_EXAMPLE "Build ui5 example" OFF)
+
+add_library(ui5 INTERFACE)
+target_include_directories(ui5 INTERFACE "${CMAKE_CURRENT_LIST_DIR}/include")
+
+if (${NUI_UI5_BUILD_EXAMPLE})
+    add_subdirectory(ui5-example-app)
+endif()
