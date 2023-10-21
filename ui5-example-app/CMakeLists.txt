@@ -24,10 +24,10 @@ else()
 
     # If msys2, copy dynamic libraries to executable directory, visual studio does this automatically.
     # And there is no need on linux.
-    # if (DEFINED ENV{MSYSTEM})
-    #     add_custom_command(TARGET ui5-example-app POST_BUILD
-    #         COMMAND bash -c "ldd $<TARGET_FILE:ui5-example-app>" | "grep" "clang" | awk "NF == 4 { system(\"${CMAKE_COMMAND} -E copy \" \$3 \" $<TARGET_FILE_DIR:ui5-example-app>\") }"
-    #         VERBATIM
-    #     )
-    # endif()
+    if (DEFINED ENV{MSYSTEM})
+        add_custom_command(TARGET ui5-example-app POST_BUILD
+            COMMAND bash -c "ldd $<TARGET_FILE:ui5-example-app>" | "grep" "clang" | awk "NF == 4 { system(\"${CMAKE_COMMAND} -E copy \" \$3 \" $<TARGET_FILE_DIR:ui5-example-app>\") }"
+            VERBATIM
+        )
+    endif()
 endif()
