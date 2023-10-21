@@ -2,6 +2,7 @@ import fs from 'fs';
 import _ from './lodash.min.js';
 import path from 'path';
 import { allUi5Components, allFioriItems } from './components.mjs';
+import { cppKeywords, specialIdentifiers, preprocessorReserved } from './cpp_keywords.mjs';
 
 const generateHeader = (item, importBase) => {
     const kebabName = _.kebabCase(item.name);
@@ -16,7 +17,22 @@ const generateHeader = (item, importBase) => {
         imports = [`@ui5/${importBase}/dist/${item.name}.js`];
     }
     const importsString = imports.map((i) => `import \"${i}\";`).join('\n');
-    const componentLines = componentZip.map((c) => `NUI_MAKE_HTML_ELEMENT_RENAME(${c[1]}, \"ui5-${c[0]}\")`).join('\n    ');
+    const componentLines = componentZip.map((c) => {
+        let symbol = c[1];
+        const tagPart = c[0];
+
+        if (cppKeywords.includes(symbol)) {
+            symbol = `${symbol}_`;
+        }
+        else if (specialIdentifiers.includes(symbol)) {
+            symbol = `${symbol}_`;
+        }
+        else if (preprocessorReserved.includes(symbol)) {
+            symbol = `${symbol}_`;
+        }
+
+        return `NUI_MAKE_HTML_ELEMENT_RENAME(${symbol}, \"ui5-${tagPart}\")`;
+    }).join('\n    ');
 
     const content = `#pragma once
 
@@ -41,7 +57,7 @@ namespace ui5
     return item;
 }
 
-const generateHeaders = (components, basePath, importBase, kitchenSinkInclude) => {
+const generateHeaders = (components, basePath, importBase, kitchenSinkInclude, isFiori) => {
     const headers = components.map((c) => generateHeader(c, importBase));
     // for each write to file sync :
     for (const header of headers) {
@@ -51,7 +67,8 @@ const generateHeaders = (components, basePath, importBase, kitchenSinkInclude) =
         fs.writeFileSync(`${basePath}/${snake}.hpp`, header.content);
     }
     // create kitchen sink include:
-    const allIncludes = headers.map((h) => `#include \"${_.snakeCase(h.name)}.hpp\"`).join('\n');
+    const fioriSubdir = isFiori ? 'fiori/' : '';
+    const allIncludes = headers.map((h) => `#include <ui5/components/${fioriSubdir}${_.snakeCase(h.name)}.hpp>`).join('\n');
     const kitchenSink = `#pragma once
 
 ${allIncludes}`;
@@ -92,8 +109,8 @@ const generateFiles = () => {
         }
     });
 
-    generateHeaders(allUi5Components, absolutePath, 'webcomponents', path.join(absolutePath, '..', 'components.hpp'));
-    generateHeaders(allFioriItems, fioriDir, 'webcomponents-fiori', path.join(absolutePath, '..', 'fiori_components.hpp'));
+    generateHeaders(allUi5Components, absolutePath, 'webcomponents', path.join(absolutePath, '..', 'components.hpp'), false);
+    generateHeaders(allFioriItems, fioriDir, 'webcomponents-fiori', path.join(absolutePath, '..', 'fiori_components.hpp'), true);
 }
 
 generateFiles();
