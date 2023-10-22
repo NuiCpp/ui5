@@ -1,8 +1,8 @@
 #include <frontend/main_page.hpp>
 
 #include <nui/frontend/api/console.hpp>
-#include <nui/frontend/elements.hpp>
 #include <nui/frontend/attributes.hpp>
+#include <nui/frontend/elements.hpp>
 
 // #include <ui5/assets/icons.hpp>
 
@@ -14,14 +14,14 @@ import "@ui5/webcomponents-icons/dist/group.js";
 // @endinline
 #endif
 
-#include <ui5/components/button.hpp>
 #include <ui5/components/avatar.hpp>
 #include <ui5/components/avatar_group.hpp>
 #include <ui5/components/badge.hpp>
-#include <ui5/components/icon.hpp>
 #include <ui5/components/breadcrumbs.hpp>
 #include <ui5/components/busy_indicator.hpp>
+#include <ui5/components/button.hpp>
 #include <ui5/components/card.hpp>
+#include <ui5/components/icon.hpp>
 #include <ui5/components/list.hpp>
 
 Nui::ElementRenderer decoWrap(std::string const& caption, Nui::ElementRenderer renderer)
@@ -29,8 +29,8 @@ Nui::ElementRenderer decoWrap(std::string const& caption, Nui::ElementRenderer r
     using namespace Nui;
     using namespace Nui::Elements;
     using namespace Nui::Attributes;
-    using Nui::Elements::div;
     using Nui::Attributes::style;
+    using Nui::Elements::div;
 
     // clang-format off
     return div{
@@ -58,7 +58,6 @@ Nui::ElementRenderer MainPage::render()
     using Nui::Elements::div; // because of the global div.
 
     using namespace Nui::Attributes::Literals;
-    using Nui::Attributes::Literals::_event;
 
     // clang-format off
     return body{}(
@@ -106,11 +105,6 @@ Nui::ElementRenderer MainPage::render()
                 "subtitleText"_prop = "Click, press Enter or Space",
                 "status"_prop = "3 of 6",
                 "interactive"_prop = true,
-                // reference.onMaterialize([](auto&& element) {
-                //     element.template call<void>("addEventListener", Nui::val{"click"}, Nui::bind([](Nui::val&&) {
-                //         Nui::Console::log("Card header clicked");
-                //     }, std::placeholders::_1));
-                // })
                 "click"_event = [](auto&&) {
                     Nui::Console::log("Card header clicked");
                 }
@@ -125,17 +119,17 @@ Nui::ElementRenderer MainPage::render()
                 "style"_prop = "margin-block-end: 0.75rem;"
             }(
                 ui5::li{
-                    "image"_prop = "../assets/images/avatars/man_avatar_2.png",
+                    "image"_prop = "https://asset.host/ava_1.png",
                     "description"_prop = "Software Architect"
-                }("Richard Wilson"),
+                }("Richard Example"),
                 ui5::li{
-                    "image"_prop = "../assets/images/avatars/woman_avatar_3.png",
+                    "image"_prop = "https://asset.host/ava_2.png",
                     "description"_prop = "Visual Designer"
-                }("Elena Petrova"),
+                }("George Nonexist"),
                 ui5::li{
-                    "image"_prop = "../assets/images/avatars/man_avatar_3.png",
+                    "image"_prop = "https://asset.host/ava_3.png",
                     "description"_prop = "Quality Specialist"
-                }("John Miller")
+                }("Hanna Nobody")
             )
         ))
     );
