@@ -1,5 +1,23 @@
-# ui5
-SAP ui5 components for nui.
+# UI5
+SAP UI5 components for nui.
+Wrapper around https://sap.github.io/ui5-webcomponents/
+
+Example:
+```cpp
+#include <nui/frontend/api/console.hpp> // Console::log
+
+#include <ui5/components/button.hpp> // ui5::button
+
+auto foo()
+{
+    return ui5::button{
+        "design"_prop = "Attention",
+        "click"_event = [](auto&& event) {
+            Nui::Console::log("Button clicked!");
+        }
+    }("Hello World");
+}
+```
 
 ## How to use
 1. Clone the repository into your project OR as a submodule OR using FetchContent
