@@ -2,12 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(ui5-example-app VERSION 0.1.0)
 
-option (NUI_IS_PROVIDED "NUI is provided for ui5 example?" OFF)
-
 # Nui Dependency
-if (NOT ${NUI_IS_PROVIDED})
-    include (${CMAKE_CURRENT_LIST_DIR}/_cmake/dependencies/nui.cmake)
-endif()
+include (${CMAKE_CURRENT_LIST_DIR}/_cmake/dependencies/nui.cmake)
 include (${CMAKE_CURRENT_LIST_DIR}/_cmake/common_options.cmake)
 
 # Add executable (sources are added later, depending on frontend/backend)

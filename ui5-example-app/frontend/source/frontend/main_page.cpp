@@ -1,5 +1,6 @@
 #include <frontend/main_page.hpp>
 
+#include <nui/frontend/api/console.hpp>
 #include <nui/frontend/elements.hpp>
 #include <nui/frontend/attributes.hpp>
 
@@ -9,6 +10,7 @@
 // @inline(js, ui5-example-app-icons)
 import "@ui5/webcomponents-icons/dist/employee.js";
 import "@ui5/webcomponents-icons/dist/pending.js";
+import "@ui5/webcomponents-icons/dist/group.js";
 // @endinline
 #endif
 
@@ -18,6 +20,9 @@ import "@ui5/webcomponents-icons/dist/pending.js";
 #include <ui5/components/badge.hpp>
 #include <ui5/components/icon.hpp>
 #include <ui5/components/breadcrumbs.hpp>
+#include <ui5/components/busy_indicator.hpp>
+#include <ui5/components/card.hpp>
+#include <ui5/components/list.hpp>
 
 Nui::ElementRenderer decoWrap(std::string const& caption, Nui::ElementRenderer renderer)
 {
@@ -49,9 +54,11 @@ Nui::ElementRenderer MainPage::render()
 {
     using namespace Nui;
     using namespace Nui::Elements;
+    using namespace Nui::Attributes;
     using Nui::Elements::div; // because of the global div.
 
     using namespace Nui::Attributes::Literals;
+    using Nui::Attributes::Literals::_event;
 
     // clang-format off
     return body{}(
@@ -87,6 +94,49 @@ Nui::ElementRenderer MainPage::render()
             ui5::breadcrumbs_item{}("Household"),
             ui5::breadcrumbs_item{}("Kitchen"),
             ui5::breadcrumbs_item{}("Product Details")
+        )),
+        decoWrap("ui5-busy-indicator", ui5::busy_indicator{
+            "size"_prop = "Medium",
+            "active"_prop = true
+        }()),
+        decoWrap("ui5-card", ui5::card{}(
+            ui5::card_header{
+                "slot"_prop = "header",
+                "titleText"_prop = "This header is interactive",
+                "subtitleText"_prop = "Click, press Enter or Space",
+                "status"_prop = "3 of 6",
+                "interactive"_prop = true,
+                // reference.onMaterialize([](auto&& element) {
+                //     element.template call<void>("addEventListener", Nui::val{"click"}, Nui::bind([](Nui::val&&) {
+                //         Nui::Console::log("Card header clicked");
+                //     }, std::placeholders::_1));
+                // })
+                "click"_event = [](auto&&) {
+                    Nui::Console::log("Card header clicked");
+                }
+            }(
+                ui5::icon{
+                    "name"_prop = "group",
+                    "slot"_prop = "avatar"
+                }()
+            ),
+            ui5::list{
+                "separators"_prop = "None",
+                "style"_prop = "margin-block-end: 0.75rem;"
+            }(
+                ui5::li{
+                    "image"_prop = "../assets/images/avatars/man_avatar_2.png",
+                    "description"_prop = "Software Architect"
+                }("Richard Wilson"),
+                ui5::li{
+                    "image"_prop = "../assets/images/avatars/woman_avatar_3.png",
+                    "description"_prop = "Visual Designer"
+                }("Elena Petrova"),
+                ui5::li{
+                    "image"_prop = "../assets/images/avatars/man_avatar_3.png",
+                    "description"_prop = "Quality Specialist"
+                }("John Miller")
+            )
         ))
     );
     // clang-format on
