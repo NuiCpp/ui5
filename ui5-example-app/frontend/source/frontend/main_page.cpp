@@ -119,15 +119,15 @@ Nui::ElementRenderer MainPage::render()
                 "style"_prop = "margin-block-end: 0.75rem;"
             }(
                 ui5::li{
-                    "image"_prop = "nui://asset.host/ava_1.jpg",
+                    "image"_prop = "nui://app.example/ava_1.jpg",
                     "description"_prop = "Software Architect"
                 }("Richard Example"),
                 ui5::li{
-                    "image"_prop = "nui://asset.host/ava_2.jpg",
+                    "image"_prop = "nui://app.example/ava_2.jpg",
                     "description"_prop = "Visual Designer"
                 }("George Nonexist"),
                 ui5::li{
-                    "image"_prop = "nui://asset.host/ava_3.jpg",
+                    "image"_prop = "nui://app.example/ava_3.jpg",
                     "description"_prop = "Quality Specialist"
                 }("Hanna Nobody")
             )
