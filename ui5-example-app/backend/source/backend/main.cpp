@@ -21,22 +21,9 @@ int main(int, char** argv)
         .allowedOrigins = {"*"s},
         .onRequest =
             [programDir](CustomSchemeRequest const& request) {
-                std::cout << "Request: " << request.scheme << std::endl;
-                std::cout << "URI: " << request.uri << std::endl;
-                std::cout << "Method: " << request.method << std::endl;
-                std::cout << "Path: " << request.parseUrl()->pathAsString() << std::endl;
-                std::cout << "Headers: " << std::endl;
-                for (auto const& [key, value] : request.headers)
-                    std::cout << "  " << key << ": " << value << std::endl;
-                // Currently there is no streaming way to obtain the body, if its large.
-                // Cannot read a body on linux with webkit 2.39 and lower.
-                std::cout << "Body: " << request.getContent() << std::endl;
-
                 // Check if file exists and return 404 if not
                 const auto file =
                     programDir / "assets" / std::filesystem::relative(request.parseUrl()->pathAsString(), "/");
-
-                std::cout << "File: " << file << std::endl;
 
                 if (!std::filesystem::exists(file))
                 {
@@ -95,9 +82,6 @@ int main(int, char** argv)
     }};
     window.setSize(1600, 950, WebViewHint::WEBVIEW_HINT_NONE);
     window.setHtml(index());
-
-    std::filesystem::path assetsPath = std::filesystem::path{argv[0]}.parent_path() / "assets";
-    std::cout << "Assets path: " << assetsPath << std::endl;
 
     window.run();
 }
