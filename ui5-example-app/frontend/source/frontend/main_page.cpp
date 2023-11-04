@@ -8,9 +8,9 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-example-app-icons)
-import "@ui5/webcomponents-icons/dist/employee.js";
-import "@ui5/webcomponents-icons/dist/pending.js";
-import "@ui5/webcomponents-icons/dist/group.js";
+js_import "@ui5/webcomponents-icons/dist/employee.js";
+js_import "@ui5/webcomponents-icons/dist/pending.js";
+js_import "@ui5/webcomponents-icons/dist/group.js";
 // @endinline
 #endif
 
@@ -119,15 +119,15 @@ Nui::ElementRenderer MainPage::render()
                 "style"_prop = "margin-block-end: 0.75rem;"
             }(
                 ui5::li{
-                    "image"_prop = "https://asset.host/ava_1.png",
+                    "image"_prop = "nui://asset.host/ava_1.jpg",
                     "description"_prop = "Software Architect"
                 }("Richard Example"),
                 ui5::li{
-                    "image"_prop = "https://asset.host/ava_2.png",
+                    "image"_prop = "nui://asset.host/ava_2.jpg",
                     "description"_prop = "Visual Designer"
                 }("George Nonexist"),
                 ui5::li{
-                    "image"_prop = "https://asset.host/ava_3.png",
+                    "image"_prop = "nui://asset.host/ava_3.jpg",
                     "description"_prop = "Quality Specialist"
                 }("Hanna Nobody")
             )
