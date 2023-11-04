@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-persian-calendar)
-import "@ui5/webcomponents-localization/dist/features/calendar/Persian.js";
+js_import "@ui5/webcomponents-localization/dist/features/calendar/Persian.js";
 // @endinline
 #endif
 

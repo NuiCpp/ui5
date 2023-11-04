@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-badge)
-import "@ui5/webcomponents/dist/Badge.js";
+js_import "@ui5/webcomponents/dist/Badge.js";
 // @endinline
 #endif
 

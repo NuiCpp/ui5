@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-japanese-calendar)
-import "@ui5/webcomponents-localization/dist/features/calendar/Japanese.js";
+js_import "@ui5/webcomponents-localization/dist/features/calendar/Japanese.js";
 // @endinline
 #endif
 

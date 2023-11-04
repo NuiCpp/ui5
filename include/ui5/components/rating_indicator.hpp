@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-rating-indicator)
-import "@ui5/webcomponents/dist/RatingIndicator.js";
+js_import "@ui5/webcomponents/dist/RatingIndicator.js";
 // @endinline
 #endif
 

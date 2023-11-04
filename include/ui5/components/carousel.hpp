@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-carousel)
-import "@ui5/webcomponents/dist/Carousel.js";
+js_import "@ui5/webcomponents/dist/Carousel.js";
 // @endinline
 #endif
 

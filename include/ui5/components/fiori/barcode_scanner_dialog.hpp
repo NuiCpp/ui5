@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-barcode-scanner-dialog)
-import "@ui5/webcomponents-fiori/dist/BarcodeScannerDialog.js";
+js_import "@ui5/webcomponents-fiori/dist/BarcodeScannerDialog.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-slider)
-import "@ui5/webcomponents/dist/Slider.js";
+js_import "@ui5/webcomponents/dist/Slider.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-message-strip)
-import "@ui5/webcomponents/dist/MessageStrip.js";
+js_import "@ui5/webcomponents/dist/MessageStrip.js";
 // @endinline
 #endif
 

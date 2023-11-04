@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-multi-input)
-import "@ui5/webcomponents/dist/MultiInput.js";
+js_import "@ui5/webcomponents/dist/MultiInput.js";
 // @endinline
 #endif
 

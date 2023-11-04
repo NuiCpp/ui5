@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-toggle-button)
-import "@ui5/webcomponents/dist/ToggleButton.js";
+js_import "@ui5/webcomponents/dist/ToggleButton.js";
 // @endinline
 #endif
 

@@ -6,9 +6,9 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-tab-container)
-import "@ui5/webcomponents/dist/TabContainer.js";
-import "@ui5/webcomponents/dist/Tab.js";
-import "@ui5/webcomponents/dist/TabSeparator.js";
+js_import "@ui5/webcomponents/dist/TabContainer.js";
+js_import "@ui5/webcomponents/dist/Tab.js";
+js_import "@ui5/webcomponents/dist/TabSeparator.js";
 // @endinline
 #endif
 

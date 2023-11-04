@@ -6,9 +6,9 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-side-navigation)
-import "@ui5/webcomponents-fiori/dist/SideNavigation.js";
-import "@ui5/webcomponents-fiori/dist/SideNavigationItem.js";
-import "@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js";
+js_import "@ui5/webcomponents-fiori/dist/SideNavigation.js";
+js_import "@ui5/webcomponents-fiori/dist/SideNavigationItem.js";
+js_import "@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js";
 // @endinline
 #endif
 

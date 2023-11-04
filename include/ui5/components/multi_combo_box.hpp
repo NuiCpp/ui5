@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-multi-combo-box)
-import "@ui5/webcomponents/dist/MultiComboBox.js";
+js_import "@ui5/webcomponents/dist/MultiComboBox.js";
 // @endinline
 #endif
 

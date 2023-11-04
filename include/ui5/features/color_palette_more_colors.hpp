@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-color-palette-more-colors)
-import "@ui5/webcomponents/dist/features/ColorPaletteMoreColors.js";
+js_import "@ui5/webcomponents/dist/features/ColorPaletteMoreColors.js";
 // @endinline
 #endif
 

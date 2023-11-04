@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-select)
-import "@ui5/webcomponents/dist/Select.js";
+js_import "@ui5/webcomponents/dist/Select.js";
 // @endinline
 #endif
 

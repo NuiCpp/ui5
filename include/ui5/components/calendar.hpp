@@ -6,10 +6,10 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-calendar)
-import "@ui5/webcomponents/dist/Calendar.js";
-import "@ui5/webcomponents/dist/CalendarHeader.js";
-import "@ui5/webcomponents/dist/CalendarDate.js";
-import "@ui5/webcomponents/dist/CalendarPart.js";
+js_import "@ui5/webcomponents/dist/Calendar.js";
+js_import "@ui5/webcomponents/dist/CalendarHeader.js";
+js_import "@ui5/webcomponents/dist/CalendarDate.js";
+js_import "@ui5/webcomponents/dist/CalendarPart.js";
 // @endinline
 #endif
 

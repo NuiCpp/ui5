@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-dynamic-side-content)
-import "@ui5/webcomponents-fiori/dist/DynamicSideContent.js";
+js_import "@ui5/webcomponents-fiori/dist/DynamicSideContent.js";
 // @endinline
 #endif
 

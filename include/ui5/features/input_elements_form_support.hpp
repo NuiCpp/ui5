@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-input-elements-form-support)
-import "@ui5/webcomponents/dist/features/InputElementsFormSupport.js";
+js_import "@ui5/webcomponents/dist/features/InputElementsFormSupport.js";
 // @endinline
 #endif
 

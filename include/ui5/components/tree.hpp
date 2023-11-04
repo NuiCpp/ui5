@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-tree)
-import "@ui5/webcomponents/dist/Tree.js";
-import "@ui5/webcomponents/dist/TreeItem.js";
+js_import "@ui5/webcomponents/dist/Tree.js";
+js_import "@ui5/webcomponents/dist/TreeItem.js";
 // @endinline
 #endif
 

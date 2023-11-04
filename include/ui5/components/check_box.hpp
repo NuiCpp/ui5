@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-check-box)
-import "@ui5/webcomponents/dist/CheckBox.js";
+js_import "@ui5/webcomponents/dist/CheckBox.js";
 // @endinline
 #endif
 

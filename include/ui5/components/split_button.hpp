@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-split-button)
-import "@ui5/webcomponents/dist/SplitButton.js";
+js_import "@ui5/webcomponents/dist/SplitButton.js";
 // @endinline
 #endif
 

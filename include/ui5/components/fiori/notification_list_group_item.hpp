@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-notification-list-group-item)
-import "@ui5/webcomponents-fiori/dist/NotificationListGroupItem.js";
-import "@ui5/webcomponents-fiori/dist/NotificationAction.js";
+js_import "@ui5/webcomponents-fiori/dist/NotificationListGroupItem.js";
+js_import "@ui5/webcomponents-fiori/dist/NotificationAction.js";
 // @endinline
 #endif
 

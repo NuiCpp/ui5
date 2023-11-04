@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-radio-button)
-import "@ui5/webcomponents/dist/RadioButton.js";
+js_import "@ui5/webcomponents/dist/RadioButton.js";
 // @endinline
 #endif
 

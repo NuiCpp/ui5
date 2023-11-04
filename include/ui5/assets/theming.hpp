@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-theming-assets)
-import "@ui5/webcomponents-theming/dist/Assets.js";
+js_import "@ui5/webcomponents-theming/dist/Assets.js";
 // @endinline
 #endif
 

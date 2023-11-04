@@ -6,10 +6,10 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-list)
-import "@ui5/webcomponents/dist/List.js";
-import "@ui5/webcomponents/dist/StandardListItem.js";
-import "@ui5/webcomponents/dist/CustomListItem.js";
-import "@ui5/webcomponents/dist/GroupHeaderListItem.js";
+js_import "@ui5/webcomponents/dist/List.js";
+js_import "@ui5/webcomponents/dist/StandardListItem.js";
+js_import "@ui5/webcomponents/dist/CustomListItem.js";
+js_import "@ui5/webcomponents/dist/GroupHeaderListItem.js";
 // @endinline
 #endif
 

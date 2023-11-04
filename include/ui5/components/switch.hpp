@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-switch)
-import "@ui5/webcomponents/dist/Switch.js";
+js_import "@ui5/webcomponents/dist/Switch.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-shell-bar)
-import "@ui5/webcomponents-fiori/dist/ShellBar.js";
+js_import "@ui5/webcomponents-fiori/dist/ShellBar.js";
 // @endinline
 #endif
 

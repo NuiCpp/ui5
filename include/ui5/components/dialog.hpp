@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-dialog)
-import "@ui5/webcomponents/dist/Dialog.js";
+js_import "@ui5/webcomponents/dist/Dialog.js";
 // @endinline
 #endif
 

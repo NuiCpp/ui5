@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-toast)
-import "@ui5/webcomponents/dist/Toast.js";
+js_import "@ui5/webcomponents/dist/Toast.js";
 // @endinline
 #endif
 

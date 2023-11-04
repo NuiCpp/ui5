@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-segmented-button)
-import "@ui5/webcomponents/dist/SegmentedButton.js";
+js_import "@ui5/webcomponents/dist/SegmentedButton.js";
 // @endinline
 #endif
 

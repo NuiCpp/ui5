@@ -6,10 +6,10 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-table)
-import "@ui5/webcomponents/dist/Table.js";
-import "@ui5/webcomponents/dist/TableColumn.js";
-import "@ui5/webcomponents/dist/TableRow.js";
-import "@ui5/webcomponents/dist/TableCell.js";
+js_import "@ui5/webcomponents/dist/Table.js";
+js_import "@ui5/webcomponents/dist/TableColumn.js";
+js_import "@ui5/webcomponents/dist/TableRow.js";
+js_import "@ui5/webcomponents/dist/TableCell.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-view-settings-dialog)
-import "@ui5/webcomponents-fiori/dist/ViewSettingsDialog.js";
+js_import "@ui5/webcomponents-fiori/dist/ViewSettingsDialog.js";
 // @endinline
 #endif
 

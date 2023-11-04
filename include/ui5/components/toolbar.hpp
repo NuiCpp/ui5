@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-toolbar)
-import "@ui5/webcomponents/dist/Toolbar.js";
+js_import "@ui5/webcomponents/dist/Toolbar.js";
 // @endinline
 #endif
 

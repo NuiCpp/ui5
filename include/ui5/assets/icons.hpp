@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-icons)
-import "@ui5/webcomponents-icons/dist/Assets.js";
+js_import "@ui5/webcomponents-icons/dist/Assets.js";
 // @endinline
 #endif
 

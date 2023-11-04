@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-label)
-import "@ui5/webcomponents/dist/Label.js";
+js_import "@ui5/webcomponents/dist/Label.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-progress-indicator)
-import "@ui5/webcomponents/dist/ProgressIndicator.js";
+js_import "@ui5/webcomponents/dist/ProgressIndicator.js";
 // @endinline
 #endif
 

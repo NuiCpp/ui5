@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-popover)
-import "@ui5/webcomponents/dist/Popover.js";
+js_import "@ui5/webcomponents/dist/Popover.js";
 // @endinline
 #endif
 

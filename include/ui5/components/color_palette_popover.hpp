@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-color-palette-popover)
-import "@ui5/webcomponents/dist/ColorPalettePopover.js";
+js_import "@ui5/webcomponents/dist/ColorPalettePopover.js";
 // @endinline
 #endif
 

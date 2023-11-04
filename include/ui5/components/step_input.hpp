@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-step-input)
-import "@ui5/webcomponents/dist/StepInput.js";
+js_import "@ui5/webcomponents/dist/StepInput.js";
 // @endinline
 #endif
 

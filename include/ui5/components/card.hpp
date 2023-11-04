@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-card)
-import "@ui5/webcomponents/dist/Card.js";
-import "@ui5/webcomponents/dist/CardHeader.js";
+js_import "@ui5/webcomponents/dist/Card.js";
+js_import "@ui5/webcomponents/dist/CardHeader.js";
 // @endinline
 #endif
 

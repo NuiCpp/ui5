@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-wizard)
-import "@ui5/webcomponents-fiori/dist/Wizard.js";
+js_import "@ui5/webcomponents-fiori/dist/Wizard.js";
 // @endinline
 #endif
 

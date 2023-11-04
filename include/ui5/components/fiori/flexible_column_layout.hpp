@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-flexible-column-layout)
-import "@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js";
+js_import "@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js";
 // @endinline
 #endif
 

@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-product-switch)
-import "@ui5/webcomponents-fiori/dist/ProductSwitch.js";
-import "@ui5/webcomponents-fiori/dist/ProductSwitchItem.js";
+js_import "@ui5/webcomponents-fiori/dist/ProductSwitch.js";
+js_import "@ui5/webcomponents-fiori/dist/ProductSwitchItem.js";
 // @endinline
 #endif
 

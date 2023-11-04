@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-date-picker)
-import "@ui5/webcomponents/dist/DatePicker.js";
+js_import "@ui5/webcomponents/dist/DatePicker.js";
 // @endinline
 #endif
 

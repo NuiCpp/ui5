@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-avatar-group)
-import "@ui5/webcomponents/dist/AvatarGroup.js";
+js_import "@ui5/webcomponents/dist/AvatarGroup.js";
 // @endinline
 #endif
 

@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-busy-indicator)
-import "@ui5/webcomponents/dist/BusyIndicator.js";
+js_import "@ui5/webcomponents/dist/BusyIndicator.js";
 // @endinline
 #endif
 

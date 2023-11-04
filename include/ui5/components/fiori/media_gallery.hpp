@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-media-gallery)
-import "@ui5/webcomponents-fiori/dist/MediaGallery.js";
-import "@ui5/webcomponents-fiori/dist/MediaGalleryItem.js";
+js_import "@ui5/webcomponents-fiori/dist/MediaGallery.js";
+js_import "@ui5/webcomponents-fiori/dist/MediaGalleryItem.js";
 // @endinline
 #endif
 

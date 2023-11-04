@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-file-uploader)
-import "@ui5/webcomponents/dist/FileUploader.js";
+js_import "@ui5/webcomponents/dist/FileUploader.js";
 // @endinline
 #endif
 

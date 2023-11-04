@@ -6,8 +6,8 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-breadcrumbs)
-import "@ui5/webcomponents/dist/Breadcrumbs.js";
-import "@ui5/webcomponents/dist/BreadcrumbsItem.js";
+js_import "@ui5/webcomponents/dist/Breadcrumbs.js";
+js_import "@ui5/webcomponents/dist/BreadcrumbsItem.js";
 // @endinline
 #endif
 

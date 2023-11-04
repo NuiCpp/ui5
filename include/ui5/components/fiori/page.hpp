@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-page)
-import "@ui5/webcomponents-fiori/dist/Page.js";
+js_import "@ui5/webcomponents-fiori/dist/Page.js";
 // @endinline
 #endif
 

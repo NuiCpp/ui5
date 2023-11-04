@@ -6,7 +6,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-text-area)
-import "@ui5/webcomponents/dist/TextArea.js";
+js_import "@ui5/webcomponents/dist/TextArea.js";
 // @endinline
 #endif
 

@@ -3,7 +3,7 @@
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-co-pilot-animation)
-import "@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js";
+js_import "@ui5/webcomponents-fiori/dist/features/CoPilotAnimation.js";
 // @endinline
 #endif
 
