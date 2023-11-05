@@ -1,5 +1,8 @@
-# UI5
+# SAPUI5 Components
 SAP UI5 components for nui.
+
+![Example Image](https://user-images.githubusercontent.com/6238896/280534443-090023ca-8831-4423-83bf-e9d16c4a9b53.png)
+
 Wrapper around https://sap.github.io/ui5-webcomponents/
 
 Example:
