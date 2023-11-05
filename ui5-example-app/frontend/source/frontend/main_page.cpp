@@ -372,7 +372,6 @@ Nui::ElementRenderer MainPage::render()
         }()),
         decoWrap("ui5-panel", ui5::panel{
             "header_text"_prop = "Panel Header",
-            "collapsed"_prop = true
         }(
             ui5::title {
                 "level"_prop = "H1"
