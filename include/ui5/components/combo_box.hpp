@@ -7,6 +7,8 @@
 #ifdef NUI_INLINE
 // @inline(js, ui5-combo-box)
 js_import "@ui5/webcomponents/dist/ComboBox.js";
+js_import "@ui5/webcomponents/dist/ComboBoxItem.js";
+js_import "@ui5/webcomponents/dist/ComboBoxGroupItem.js";
 // @endinline
 #endif
 

@@ -75,7 +75,12 @@ export const allUi5Components = [
     },
     {
         name: 'ComboBox',
-        components: ['combobox', 'cb-item']
+        components: ['combobox', 'cb-item'],
+        imports: [
+            "@ui5/webcomponents/dist/ComboBox.js",
+            "@ui5/webcomponents/dist/ComboBoxItem.js",
+            "@ui5/webcomponents/dist/ComboBoxGroupItem.js"
+        ]
     },
     {
         name: 'DatePicker'
@@ -126,6 +131,10 @@ export const allUi5Components = [
         components: [
             'menu',
             'menu-item'
+        ],
+        imports: [
+            "@ui5/webcomponents/dist/Menu.js",
+            "@ui5/webcomponents/dist/MenuItem.js"
         ]
     },
     {
@@ -133,7 +142,12 @@ export const allUi5Components = [
     },
     {
         name: 'MultiComboBox',
-        components: ['multi-combobox', 'mcb-item']
+        components: ['multi-combobox', 'mcb-item', 'mcb-group-item'],
+        imports: [
+            "@ui5/webcomponents/dist/MultiComboBox.js",
+            "@ui5/webcomponents/dist/MultiComboBoxItem.js",
+            "@ui5/webcomponents/dist/MultiComboBoxGroupItem.js"
+        ]
     },
     {
         name: 'MultiInput'
@@ -221,7 +235,15 @@ export const allUi5Components = [
         name: 'ToggleButton'
     },
     {
-        name: 'Toolbar'
+        name: 'Toolbar',
+        components: ['toolbar', 'toolbar-button', 'toolbar-select', 'toolbar-select-option', 'toolbar-separator', 'toolbar-spacer'],
+        imports: [
+            "@ui5/webcomponents/dist/Toolbar.js",
+            "@ui5/webcomponents/dist/ToolbarButton.js",
+            "@ui5/webcomponents/dist/ToolbarSelect.js",
+            "@ui5/webcomponents/dist/ToolbarSeparator.js",
+            "@ui5/webcomponents/dist/ToolbarSpacer.js"
+        ]
     },
     {
         name: 'Tree',
