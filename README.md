@@ -73,7 +73,8 @@ missing_component.hpp:
 
 #ifdef NUI_INLINE
 // @inline(js, ui5-missing-component)
-import "@ui5/webcomponents/dist/MissingComponent.js";
+// js_import to avoid collision with c++ modules
+js_import "@ui5/webcomponents/dist/MissingComponent.js";
 // @endinline
 #endif
 

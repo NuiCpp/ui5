@@ -16,7 +16,7 @@ const generateHeader = (item, importBase) => {
     } else {
         imports = [`@ui5/${importBase}/dist/${item.name}.js`];
     }
-    const importsString = imports.map((i) => `import \"${i}\";`).join('\n');
+    const importsString = imports.map((i) => `js_import \"${i}\";`).join('\n');
     const componentLines = componentZip.map((c) => {
         let symbol = c[1];
         const tagPart = c[0];
