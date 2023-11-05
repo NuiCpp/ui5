@@ -15,4 +15,5 @@ js_import "@ui5/webcomponents/dist/MultiComboBox.js";
 namespace ui5
 {
     NUI_MAKE_HTML_ELEMENT_RENAME(multi_combobox, "ui5-multi-combobox")
+    NUI_MAKE_HTML_ELEMENT_RENAME(mcb_item, "ui5-mcb-item")
 }

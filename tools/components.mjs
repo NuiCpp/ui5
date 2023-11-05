@@ -71,8 +71,11 @@ export const allUi5Components = [
         name: 'ColorPalettePopover'
     },
     {
+        name: 'ColorPicker'
+    },
+    {
         name: 'ComboBox',
-        components: ['combobox']
+        components: ['combobox', 'cb-item']
     },
     {
         name: 'DatePicker'
@@ -130,7 +133,7 @@ export const allUi5Components = [
     },
     {
         name: 'MultiComboBox',
-        components: ['multi-combobox']
+        components: ['multi-combobox', 'mcb-item']
     },
     {
         name: 'MultiInput'
@@ -157,7 +160,8 @@ export const allUi5Components = [
         name: 'ResponsivePopover'
     },
     {
-        name: 'SegmentedButton'
+        name: 'SegmentedButton',
+        components: ['segmented-button', 'segmented-button-item'],
     },
     {
         name: 'Select',

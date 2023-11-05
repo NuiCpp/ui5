@@ -15,4 +15,5 @@ js_import "@ui5/webcomponents/dist/SegmentedButton.js";
 namespace ui5
 {
     NUI_MAKE_HTML_ELEMENT_RENAME(segmented_button, "ui5-segmented-button")
+    NUI_MAKE_HTML_ELEMENT_RENAME(segmented_button_item, "ui5-segmented-button-item")
 }

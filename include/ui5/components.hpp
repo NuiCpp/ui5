@@ -12,6 +12,7 @@
 #include <ui5/components/check_box.hpp>
 #include <ui5/components/color_palette.hpp>
 #include <ui5/components/color_palette_popover.hpp>
+#include <ui5/components/color_picker.hpp>
 #include <ui5/components/combo_box.hpp>
 #include <ui5/components/date_picker.hpp>
 #include <ui5/components/date_range_picker.hpp>

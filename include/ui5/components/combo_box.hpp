@@ -15,4 +15,5 @@ js_import "@ui5/webcomponents/dist/ComboBox.js";
 namespace ui5
 {
     NUI_MAKE_HTML_ELEMENT_RENAME(combobox, "ui5-combobox")
+    NUI_MAKE_HTML_ELEMENT_RENAME(cb_item, "ui5-cb-item")
 }
