@@ -2,7 +2,21 @@
 
 #include <nui/frontend/element_renderer.hpp>
 
-class MainPage {
-public:
-  Nui::ElementRenderer render();
+#include <memory>
+
+class MainPage
+{
+  public:
+    MainPage();
+    ~MainPage();
+    MainPage(MainPage const&) = delete;
+    MainPage(MainPage&&);
+    MainPage& operator=(MainPage const&) = delete;
+    MainPage& operator=(MainPage&&);
+
+    Nui::ElementRenderer render();
+
+  private:
+    struct Implementation;
+    std::unique_ptr<Implementation> impl_;
 };

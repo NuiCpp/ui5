@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.16)
 project(ui5-example-app VERSION 0.1.0)
 
 # Nui Dependency
-include (${CMAKE_CURRENT_LIST_DIR}/_cmake/dependencies/nui.cmake)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/dependencies/Nui)
+#include (${CMAKE_CURRENT_LIST_DIR}/_cmake/dependencies/nui.cmake)
 include (${CMAKE_CURRENT_LIST_DIR}/_cmake/common_options.cmake)
 
 # Add executable (sources are added later, depending on frontend/backend)
