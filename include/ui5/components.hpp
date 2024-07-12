@@ -49,4 +49,9 @@
 #include <ui5/components/toast.hpp>
 #include <ui5/components/toggle_button.hpp>
 #include <ui5/components/toolbar.hpp>
+#include <ui5/components/toolbar_button.hpp>
+#include <ui5/components/toolbar_select.hpp>
+#include <ui5/components/toolbar_select_option.hpp>
+#include <ui5/components/toolbar_separator.hpp>
+#include <ui5/components/toolbar_spacer.hpp>
 #include <ui5/components/tree.hpp>

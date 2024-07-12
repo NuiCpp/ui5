@@ -60,12 +60,17 @@ js_import "@ui5/webcomponents-icons/dist/group.js";
 #include <ui5/components/step_input.hpp>
 #include <ui5/components/switch.hpp>
 #include <ui5/components/tab_container.hpp>
-// #include <ui5/components/table.hpp>
+#include <ui5/components/table.hpp>
 #include <ui5/components/text_area.hpp>
 #include <ui5/components/time_picker.hpp>
 #include <ui5/components/toast.hpp>
 #include <ui5/components/toggle_button.hpp>
 #include <ui5/components/toolbar.hpp>
+#include <ui5/components/toolbar_button.hpp>
+#include <ui5/components/toolbar_select.hpp>
+#include <ui5/components/toolbar_select_option.hpp>
+#include <ui5/components/toolbar_separator.hpp>
+#include <ui5/components/toolbar_spacer.hpp>
 #include <ui5/components/tree.hpp>
 
 struct MainPage::Implementation
@@ -500,31 +505,31 @@ Nui::ElementRenderer MainPage::render()
             ui5::tab{"icon"_prop = "employee"}(ui5::label{}("Tab 2")),
             ui5::tab{"icon"_prop = "employee"}(ui5::label{}("Tab 3"))
         )),
-        // decoWrap("ui5-table", ui5::table{}(
-        //     ui5::table_row{}(
-        //         ui5::table_cell{}(span{}("Notebook Basic 15")),
-        //         ui5::table_cell{}(span{}("Very Best Screens")),
-        //         ui5::table_cell{}(span{}("30 x 19 x 3cm")),
-        //         ui5::table_cell{}(span{style = "color: #2b7c2b"}(b{style = "padding-right: 0.125rem"}("4.2"), text{"KG"}())),
-        //         ui5::table_cell{}(span{}(b{style = "padding-right: 0.125rem"}("956"), text{"EUR"}()))
-        //     ),
-        //     ui5::table_column{
-        //         "slot"_prop = "columns"
-        //     }("Product"),
-        //     ui5::table_column{
-        //         "slot"_prop = "columns",
-        //         "min_width"_prop = "400"
-        //     }("Supplier"),
-        //     ui5::table_column{
-        //         "slot"_prop = "columns",
-        //         "min_width"_prop = "400"
-        //     }("Dimensions"),
-        //     ui5::table_column{
-        //         "slot"_prop = "columns",
-        //         "min_width"_prop = "400"
-        //     }("Weight"),
-        //     ui5::table_column{}("Price")
-        // ))
+        decoWrap("ui5-table", ui5::table{}(
+            ui5::table_row{}(
+                ui5::table_cell{}(span{}("Notebook Basic 15")),
+                ui5::table_cell{}(span{}("Very Best Screens")),
+                ui5::table_cell{}(span{}("30 x 19 x 3cm")),
+                ui5::table_cell{}(span{style = "color: #2b7c2b"}(b{style = "padding-right: 0.125rem"}("4.2"), text{"KG"}())),
+                ui5::table_cell{}(span{}(b{style = "padding-right: 0.125rem"}("956"), text{"EUR"}()))
+            ),
+            ui5::table_column{
+                "slot"_prop = "columns"
+            }("Product"),
+            ui5::table_column{
+                "slot"_prop = "columns",
+                "min_width"_prop = "400"
+            }("Supplier"),
+            ui5::table_column{
+                "slot"_prop = "columns",
+                "min_width"_prop = "400"
+            }("Dimensions"),
+            ui5::table_column{
+                "slot"_prop = "columns",
+                "min_width"_prop = "400"
+            }("Weight"),
+            ui5::table_column{}("Price")
+        )),
         decoWrap("ui5-text-area", ui5::textarea{
             "placeholder"_prop = "Enter your comment here",
         }()),
@@ -549,8 +554,12 @@ Nui::ElementRenderer MainPage::render()
         )),
         decoWrap("ui5-toolbar", ui5::toolbar{}(
             ui5::toolbar_button{"text"_prop = "Button 1"}(),
-            ui5::toolbar_button{"text"_prop = "Button 2"}(),
-            ui5::toolbar_button{"text"_prop = "Button 3"}()
+            ui5::toolbar_separator{}(),
+            ui5::toolbar_select{}(
+                ui5::toolbar_select_option{}("Option 1"),
+                ui5::toolbar_select_option{}("Option 2")
+            ),
+            ui5::toolbar_spacer{}()
         )),
         decoWrap("ui5-tree", ui5::tree{}(
             ui5::tree_item{
